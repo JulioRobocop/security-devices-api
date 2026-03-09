@@ -1,0 +1,61 @@
+# Security Devices API 🔒
+
+## 📋 Description
+
+This is a Full Stack security devices register, where people can get, add, update and delete security devices. This project aims the Full Stack job interview for Pado's Jr full stack position.
+
+## 🛠️ Technologies
+
+Node.js, Express, MongoDB, Mongoose
+
+## ✅ Prerequisites
+
+Node.js v18+ and npm v8+
+
+## ⚙️ Installation
+
+1. Clone this repository:
+   ​`bash
+git clone <repository-url>
+cd server
+​`
+2. Install dependencies:
+   ​`bash
+npm install
+​`
+3. Configure environment variables:
+   ​```bash
+   cp .env.example .env
+
+## 🚀 Running the project
+
+-Make sure you are in server folder and then:
+npm run dev ("dev": "nodemon index.js")
+
+## 🔑 Environment Variables
+
+DATABASE_URI=your_cluster_link
+PORT=3000
+
+## 📡 API Endpoints
+
+| Method | Endpoint     | Description                                   |
+| ------ | ------------ | --------------------------------------------- |
+| GET    | /devices     | Get all devices. Filter by type: ?type=camera |
+| GET    | /devices/:id | Get an specific device                        |
+| POST   | /devices     | Create a device                               |
+| PUT    | /devices/:id | Update a device                               |
+| DELETE | /devices/:id | Delete a device                               |
+
+## 📁 Project Structure
+
+​`
+backend/
+  src/
+    config/      # Database connection
+    controllers/ # Request handlers
+    models/      # Mongoose schemas
+    routes/      # API routes
+  index.js       # Entry point
+  .env           # Environment variables
+​`

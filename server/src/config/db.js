@@ -1,10 +1,9 @@
 import mongoose from "mongoose";
 
-const URI = process.env.DATABASE_URL;
-
 const connectDB = async () => {
+  console.log("URI: ", process.env.DATABASE_URI);
   try {
-    await mongoose.connect(URI);
+    await mongoose.connect(process.env.DATABASE_URI);
     console.log("DB connected!");
   } catch (error) {
     console.error("Error", error);

@@ -60,3 +60,11 @@ const deleteDevice = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+export {
+  getAllDevices,
+  getDeviceById,
+  createDevice,
+  updateDevice,
+  deleteDevice,
+};
