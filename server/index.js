@@ -14,10 +14,6 @@ app.use(express.json());
 app.use(cors());
 app.use("/devices", deviceRouter);
 
-app.get("/", (req, res) => {
-  res.send("Salve");
-});
-
 // Listening server
 const startServer = async () => {
   await connectDB();
