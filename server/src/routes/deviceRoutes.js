@@ -3,16 +3,12 @@ import {
   getAllDevices,
   getDeviceById,
   createDevice,
-  updateDevice,
-  deleteDevice,
-} from "../controllers/device.js";
+} from "../controllers/devicesControllers.js";
 
 const router = Router();
 
-router.get("/", getAllDevices);
-router.get("/:id", getDeviceById);
-router.post("/", createDevice);
-router.put("/:id", updateDevice);
-router.delete("/:id", deleteDevice);
+router.get("/listar", getAllDevices);
+router.get("/listar/:deviceId", getDeviceById);
+router.post("/registrar", createDevice);
 
 export default router;

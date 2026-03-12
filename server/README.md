@@ -59,3 +59,18 @@ backend/
   index.js       # Entry point
   .env           # Environment variables
 ​`
+
+## 🐳 Docker
+
+Build the image:
+​`bash
+docker build -t security-devices-api .
+​`
+
+Run the container:
+​`bash
+docker run -p 3000:3000 \
+  -e DATABASE_URL=your_mongodb_uri \
+  -e PORT=3000 \
+  security-devices-api
+​`
